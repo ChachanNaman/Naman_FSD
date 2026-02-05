@@ -1,0 +1,90 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Naman Chachan | Portfolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        h1 {
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Portfolio</a>
+
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                    <li><a class="dropdown-item" href="https://github.com/ChachanNaman" target="_blank">GitHub</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container content-box mt-4">
+    <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+            <img src="IMG_2602.jpg"
+                 class="img-fluid rounded-circle shadow"
+                 alt="Naman Chachan"
+                 style="width:180px; height:180px; object-fit:cover;">
+        </div>
+
+        <div class="col-md-8">
+            <h1>Naman Chachan</h1>
+            <p class="lead">B.Tech CSE | Data Science & Full Stack Enthusiast</p>
+
+            <p>
+                Student at <b>MIT World Peace University</b> with strong interest in
+                Machine Learning, Data Science and Web Development.
+            </p>
+
+            <a href="about.html" class="btn btn-primary">Know More</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <h3>Skills</h3>
+    <ul>
+        <li>Python, C++, JavaScript</li>
+        <li>Machine Learning, Data Science</li>
+        <li>HTML, CSS, Bootstrap</li>
+    </ul>
+
+    <h3 class="mt-4">Education</h3>
+    <table class="table table-bordered">
+        <tr>
+            <th>Institute</th>
+            <th>Course</th>
+            <th>CGPA</th>
+        </tr>
+        <tr>
+            <td>MIT WPU</td>
+            <td>B.Tech CSE</td>
+            <td>8.42</td>
+        </tr>
+    </table>
+</div>
+
+<footer class="text-center bg-dark text-light p-3 mt-4">
+    © 2026 Naman Chachan
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
