@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Database REST API</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">📚 Book Database</div>
+      <span class="badge">REST API</span>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- ADD BOOK FORM -->
+    <div class="card">
+      <h2>Add New Book</h2>
+      <div class="form-grid">
+        <input type="text" id="title" placeholder="Book Title *" />
+        <input type="text" id="author" placeholder="Author *" />
+        <input type="text" id="genre" placeholder="Genre" />
+        <input type="number" id="year" placeholder="Year" />
+      </div>
+      <button onclick="addBook()">+ Add Book</button>
+    </div>
+
+    <!-- UPDATE FORM -->
+    <div class="card">
+      <h2>Update Book</h2>
+      <div class="form-grid">
+        <input type="number" id="update-id" placeholder="Book ID *" />
+        <input type="text" id="update-title" placeholder="New Title" />
+        <input type="text" id="update-author" placeholder="New Author" />
+        <input type="text" id="update-genre" placeholder="New Genre" />
+      </div>
+      <button class="btn-warning" onclick="updateBook()">✏ Update Book</button>
+    </div>
+
+    <!-- DELETE -->
+    <div class="card">
+      <h2>Delete Book</h2>
+      <div class="delete-row">
+        <input type="number" id="delete-id" placeholder="Enter Book ID to delete" />
+        <button class="btn-danger" onclick="deleteBook()">🗑 Delete</button>
+      </div>
+    </div>
+
+    <!-- BOOK LIST -->
+    <div class="card full-width">
+      <div class="list-header">
+        <h2>All Books</h2>
+        <button class="btn-outline" onclick="fetchBooks()">↻ Refresh</button>
+      </div>
+      <div id="book-list"><p class="loading">Loading books...</p></div>
+    </div>
+
+    <!-- API ENDPOINTS REFERENCE -->
+    <div class="card full-width endpoints">
+      <h2>API Endpoints</h2>
+      <table>
+        <thead>
+          <tr><th>Method</th><th>Endpoint</th><th>Description</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="method get">GET</span></td><td>/api/books</td><td>Get all books</td></tr>
+          <tr><td><span class="method get">GET</span></td><td>/api/books/:id</td><td>Get book by ID</td></tr>
+          <tr><td><span class="method post">POST</span></td><td>/api/books</td><td>Add a new book</td></tr>
+          <tr><td><span class="method put">PUT</span></td><td>/api/books/:id</td><td>Update a book</td></tr>
+          <tr><td><span class="method delete">DELETE</span></td><td>/api/books/:id</td><td>Delete a book</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
