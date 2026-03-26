@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo-icon">📄</div>
+    <div>
+      <h1>Resume Builder</h1>
+      <p>Fill in your details and preview your resume</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="form-section">
+
+      <div class="card">
+        <h2>Personal Info</h2>
+        <input type="text" id="name" placeholder="Full Name" />
+        <div class="input-row">
+          <input type="email" id="email" placeholder="Email Address" />
+          <input type="text" id="phone" placeholder="Phone Number" />
+        </div>
+        <input type="text" id="linkedin" placeholder="LinkedIn / Portfolio URL" />
+      </div>
+
+      <div class="card">
+        <h2>Career Objective</h2>
+        <textarea id="objective" rows="3" placeholder="Write your career objective..."></textarea>
+      </div>
+
+      <div class="card">
+        <h2>Professional Summary</h2>
+        <textarea id="summary" rows="3" placeholder="Brief professional summary..."></textarea>
+      </div>
+
+      <div class="card">
+        <h2>Education</h2>
+        <input type="text" id="degree" placeholder="Degree (e.g. B.Tech CSE)" />
+        <input type="text" id="college" placeholder="College / University" />
+        <div class="input-row">
+          <input type="text" id="year" placeholder="Year (e.g. 2022 – 2026)" />
+          <input type="text" id="cgpa" placeholder="CGPA / Percentage" />
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Skills</h2>
+        <input type="text" id="academic-skills" placeholder="Academic Skills (comma separated)" />
+        <input type="text" id="nonacademic-skills" placeholder="Non-Academic Skills (comma separated)" />
+      </div>
+
+      <div class="card">
+        <h2>Experience & Internships</h2>
+        <div class="input-row">
+          <input type="text" id="company" placeholder="Company / Organization" />
+          <input type="text" id="role" placeholder="Role / Position" />
+        </div>
+        <input type="text" id="duration" placeholder="Duration (e.g. Jun 2024 – Aug 2024)" />
+        <textarea id="exp-desc" rows="2" placeholder="Brief description of work..."></textarea>
+      </div>
+
+      <div class="card">
+        <h2>Achievements</h2>
+        <textarea id="achievements" rows="3" placeholder="List your achievements (one per line)..."></textarea>
+      </div>
+
+      <button onclick="generateResume()">Generate Resume →</button>
+    </div>
+
+    <div class="preview-section" id="resume-preview">
+      <p class="placeholder-text">Your resume preview will appear here...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
